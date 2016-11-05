@@ -20,7 +20,7 @@ for ($i = 0; $i < $config['ponaglenia']; $i++) {
 
     if ($i % 1000 == 0) {
         $prep = $pdo->prepare(substr($query, 0, -1))->execute();
-        $query = "insert into `Miasta` (NazwaMiasta) values ";
+        $query = $sql;
         $added = true;
 
         if (!$prep) {
@@ -31,9 +31,4 @@ for ($i = 0; $i < $config['ponaglenia']; $i++) {
 if (!$added) {
     $prep = $pdo->prepare(substr($query, 0, -1))->execute();
 }
-if ($prep) {
-    echo "\033[32m \n  Dodano " . $i . " rekordow do tabeli Ponaglenia \e[0m \n";
-} else {
-    echo "\033[31m \n  Nie udalo sie dodac rekordow do tabeli Ponaglenia \e[0m \n";
-
-}
+check($prep,$i,"Ponaglenia");
