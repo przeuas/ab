@@ -2,7 +2,7 @@
 
 
 return array(
-    'city' => 1000000,
+    'city' => 199,
     'podmioty' =>  1000000,
     'dlugi' =>  1000000,
     'upowaznienia' =>  1000000,
