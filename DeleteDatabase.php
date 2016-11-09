@@ -21,5 +21,5 @@ SET FOREIGN_KEY_CHECKS = 1; -- Enable foreign key checking.";
 $delete = $pdo->prepare($query)->execute();
 
 if ($delete) {
-    echo "usunieto ";
+    echo " usunieto stare rekordy";
 }

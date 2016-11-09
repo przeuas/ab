@@ -10,4 +10,4 @@ $typyWindykatora = substr($typyWindykatora , 0, -1);
 $query = "INSERT INTO `TypyWindykatorow` (NazwaTypuWindykatora) VALUE $typyWindykatora";
 $prep = $pdo->prepare($query)->execute();
 
-check($prep,$config['typyWindykatorow'],"typyWindykatora");
+check($prep,sizeof($config['typyWindykatorow']),"typyWindykatora");

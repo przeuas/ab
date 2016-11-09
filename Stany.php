@@ -10,4 +10,4 @@ $stany = substr($stany, 0, -1);
 $query = "INSERT INTO `Stany` (NazwaStanu) VALUE $stany";
 $prep = $pdo->prepare($query)->execute();
 
-check($prep,$i,"Stany");
+check($prep,sizeof($config['stany']),"Stany");

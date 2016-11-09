@@ -9,6 +9,7 @@ $query = $sql;
 
 
 for ($i = 0; $i < $config['faktury']; $i++) {
+    $added=false;
     $dataWystawienia = rand(time() - 100000, time() - 1);
     $idPostepowania = rand(1, $config['postepowania']);
     $numerFaktury = $faker->randomNumber();

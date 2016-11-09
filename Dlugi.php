@@ -18,6 +18,7 @@ function idWierzyciela($idDluznika, $podmioty)
 
 
 for ($i = 0; $i < $config['dlugi']; $i++) {
+    $added=false;
     $idDluznika = rand(1, $config['podmioty']);
     $idWierzyciela = idWierzyciela($idDluznika, $config['podmioty']);
     $kwotaZobowiązania = number_format((float)rand(1, rand(100, 1000000000)) / rand(10, 100), 2, '.', '');
